@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 			return;
 		}
 
-		var statusOutput = shell.exec("git status -s");
+		var statusOutput = shell.exec("git status -s", {silent: true});
 		if (statusOutput.code !== 0) {
 			grunt.fail.fatal("Failed to detect the current status");
 		}
