@@ -31,4 +31,5 @@ You may override this behavior by passing `--no-checkpending` via command line. 
 
 ## Release History
 
-(none)
+### 0.1.1 (2013-10-01)
+* Initial release
