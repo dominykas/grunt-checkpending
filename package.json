@@ -1,0 +1,49 @@
+{
+  "name": "grunt-checkpending",
+  "description": "Check that we have no pending changes before proceeding.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/dymonaz/grunt-checkpending",
+  "author": {
+    "name": "Dominykas Blyžė",
+    "email": "hello@dominykas.com",
+    "url": "http://www.dominykas.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dymonaz/grunt-checkpending.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dymonaz/grunt-checkpending/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/dymonaz/grunt-checkpending/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.5.1",
+    "buster": "~0.7.6",
+    "grunt-buster": "~0.2.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin",
+    "git"
+  ],
+  "dependencies": {
+    "shelljs": "~0.2.6"
+  }
+}
