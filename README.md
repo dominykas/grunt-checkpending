@@ -31,5 +31,9 @@ You may override this behavior by passing `--no-checkpending` via command line. 
 
 ## Release History
 
+### 0.1.2 (2014-05-26)
+* npm update
+* Travis setup
+
 ### 0.1.1 (2013-10-01)
 * Initial release
