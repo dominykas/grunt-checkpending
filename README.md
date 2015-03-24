@@ -2,7 +2,7 @@
 
 > Check that we have no pending changes before proceeding.
 
-[![Build Status](https://travis-ci.org/dymonaz/grunt-checkpending.svg?branch=master)](https://travis-ci.org/dymonaz/grunt-checkpending)
+[![Build Status](https://travis-ci.org/dominykas/grunt-checkpending.svg?branch=master)](https://travis-ci.org/dominykas/grunt-checkpending)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
