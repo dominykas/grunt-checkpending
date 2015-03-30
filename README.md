@@ -33,6 +33,9 @@ You may override this behavior by passing `--no-checkpending` via command line. 
 
 ## Release History
 
+### 0.1.6 (2015-03-30)
+* Actually treat --verbose flag correctly, i.e. `silent:true` when not verbose
+
 ### 0.1.5 (2015-03-24)
 * enable node 0.12 and io.js on Travis
 
