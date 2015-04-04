@@ -19,15 +19,19 @@ module.exports = function (grunt) {
 			return;
 		}
 
-		var statusOutput = shell.exec("git status -s", { silent: !grunt.option('verbose') });
-		if (statusOutput.code !== 0) {
-			grunt.fail.fatal("Failed to detect the current status");
-		}
+		var done = this.async();
+		shell.exec("git status -s", { silent: !grunt.option('verbose') }, function (e, statusOutput) {
+			if (e) {
+				grunt.fail.fatal("Failed to detect the current status");
+			}
 
-		var status = statusOutput.output.trim();
-		if (status !== "") {
-			grunt.fail.fatal("You have pending changes.");
-		}
+			var status = statusOutput.trim();
+			if (status !== "") {
+				grunt.fail.fatal("You have pending changes.");
+			}
+
+			done();
+		});
 
 	});
 };
