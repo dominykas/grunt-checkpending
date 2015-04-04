@@ -33,6 +33,9 @@ You may override this behavior by passing `--no-checkpending` via command line. 
 
 ## Release History
 
+### 0.1.7 (2015-04-04)
+* Async exec
+
 ### 0.1.6 (2015-03-30)
 * Actually treat --verbose flag correctly, i.e. `silent:true` when not verbose
 
