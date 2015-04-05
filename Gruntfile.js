@@ -66,7 +66,9 @@ module.exports = function (grunt) {
 
 	grunt.registerTask("release", function () {
 		var bump = grunt.option("bump");
-		if (bump != "patch" && bump != "minor" && bump != "major") grunt.fail.fatal("Please pass --bump");
+		if (bump !== "patch" && bump !== "minor" && bump !== "major") {
+			grunt.fail.fatal("Please pass --bump");
+		}
 		grunt.task.run(["checkbranch:master", "checkpending", "default", "bump:" + bump]);
 	});
 
