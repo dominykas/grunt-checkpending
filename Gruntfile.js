@@ -1,11 +1,3 @@
-/*
- * grunt-checkpending
- * https://github.com/dymonaz/grunt-checkpending
- *
- * Copyright (c) 2013 Dominykas Blyžė
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 module.exports = function (grunt) {
