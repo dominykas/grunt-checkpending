@@ -1,7 +1,7 @@
 {
   "name": "grunt-checkpending",
   "description": "Check that we have no pending changes before proceeding.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/dominykas/grunt-checkpending",
   "author": {
     "name": "Dominykas Blyžė",
@@ -23,6 +23,9 @@
   "scripts": {
     "test": "grunt --verbose"
   },
+  "dependencies": {
+    "shelljs": "0.5.x"
+  },
   "devDependencies": {
     "buster": "0.7.x",
     "grunt": "0.4.x",
@@ -39,8 +42,5 @@
   "keywords": [
     "gruntplugin",
     "git"
-  ],
-  "dependencies": {
-    "shelljs": "0.4.x"
-  }
+  ]
 }
