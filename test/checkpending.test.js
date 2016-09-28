@@ -2,7 +2,7 @@ var buster = require('buster');
 var expect = buster.referee.expect;
 var shell = require('shelljs');
 
-var GRUNT_SUCCESS = "Done, without errors.";
+var GRUNT_SUCCESS = "Done.";
 var GRUNT_FATAL = "Fatal error:";
 
 var execGrunt = function (gruntCmd) {
@@ -37,14 +37,14 @@ buster.testCase("grunt-checkpending", {
 		shell.popd();
 
 		var output = execGrunt("checkpending");
-		expect(output.output).toMatch(GRUNT_FATAL);
-		expect(output.output).toMatch("you have pending changes");
+		expect(output.stdout).toMatch(GRUNT_FATAL);
+		expect(output.stdout).toMatch("you have pending changes");
 		expect(output.code).toEqual(1, "Incorrect grunt output code");
 	},
 
 	"should proceed when there are no changes": function () {
 		var output = execGrunt("checkpending");
-		expect(output.output).toMatch(GRUNT_SUCCESS);
+		expect(output.stdout).toMatch(GRUNT_SUCCESS);
 		expect(output.code).toEqual(0, "Incorrect grunt output code");
 	},
 
@@ -54,7 +54,7 @@ buster.testCase("grunt-checkpending", {
 		shell.popd();
 
 		var output = execGrunt("checkpending --no-checkpending");
-		expect(output.output).toMatch(GRUNT_SUCCESS);
+		expect(output.stdout).toMatch(GRUNT_SUCCESS);
 		expect(output.code).toEqual(0, "Incorrect grunt output code");
 	},
 
@@ -64,8 +64,8 @@ buster.testCase("grunt-checkpending", {
 		shell.popd();
 
 		var output = execGrunt("checkpending:true --no-checkpending");
-		expect(output.output).toMatch(GRUNT_FATAL);
-		expect(output.output).toMatch("you have pending changes");
+		expect(output.stdout).toMatch(GRUNT_FATAL);
+		expect(output.stdout).toMatch("you have pending changes");
 		expect(output.code).toEqual(1, "Incorrect grunt output code");
 	},
 
@@ -75,8 +75,8 @@ buster.testCase("grunt-checkpending", {
 		shell.popd();
 
 		var output = execGrunt("checkpending");
-		expect(output.output).toMatch(GRUNT_FATAL);
-		expect(output.output).toMatch("Failed to detect");
+		expect(output.stdout).toMatch(GRUNT_FATAL);
+		expect(output.stdout).toMatch("Failed to detect");
 		expect(output.code).toEqual(1, "Incorrect grunt output code");
 	}
 
