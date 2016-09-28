@@ -1,7 +1,7 @@
 {
   "name": "grunt-checkpending",
   "description": "Check that we have no pending changes before proceeding.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/dominykas/grunt-checkpending",
   "author": {
     "name": "Dominykas Blyžė",
